@@ -2,7 +2,7 @@
 
 namespace Database\Seeders;
 
-use App\Models\User;
+use App\Models\Mahasiswa;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
@@ -15,11 +15,15 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-        // User::factory(10)->create();
+        $data = [
+            ['nim' => '250001', 'nama' => 'Suciyanti',           'email' => 'suciyanti@example.com',  'jurusan' => 'Teknik Komputer'],
+            ['nim' => '250002', 'nama' => 'Nur Amalia',          'email' => 'nuramalia@example.com',  'jurusan' => 'Teknik Komputer'],
+            ['nim' => '250003', 'nama' => 'Siti Fahira Azzahra', 'email' => 'sitifahira@example.com', 'jurusan' => 'Teknik Informatika'],
+            ['nim' => '250004', 'nama' => 'Nadia Anastasya',     'email' => 'nadia@example.com',      'jurusan' => 'Sistem Informasi'],
+        ];
 
-        User::factory()->create([
-            'name' => 'Test User',
-            'email' => 'test@example.com',
-        ]);
+        foreach ($data as $row) {
+            Mahasiswa::updateOrCreate(['nim' => $row['nim']], $row);
+        }
     }
 }
