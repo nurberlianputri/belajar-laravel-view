@@ -5,6 +5,7 @@
             <a href="/" class="hover:text-yellow-300">Beranda</a>
             <a href="/program" class="hover:text-yellow-300">Program</a>
             <a href="/contact" class="hover:text-yellow-300">Kontak</a>
+            <a href="/mahasiswa" class="hover:text-yellow-300">Mahasiswa</a>
         </div>
     </nav>
 </header>

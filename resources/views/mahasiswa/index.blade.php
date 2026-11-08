@@ -15,8 +15,8 @@
         <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-3 mb-4">
             <form action="{{ route('mahasiswa.index') }}" method="GET" class="flex gap-2">
                 <input type="text" name="q" value="{{ request('q') }}"
-                       placeholder="Cari NIM, nama, email, jurusan..."
-                       class="border rounded-lg px-3 py-2 w-64 focus:outline-none focus:ring-2 focus:ring-blue-400">
+                    placeholder="Cari NIM, nama, email, jurusan..."
+                    class="border rounded-lg px-3 py-2 w-64 focus:outline-none focus:ring-2 focus:ring-blue-400">
                 <button type="submit" class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700">Cari</button>
                 @if (request('q'))
                     <a href="{{ route('mahasiswa.index') }}" class="px-4 py-2 rounded-lg border hover:bg-gray-100">Reset</a>
@@ -24,7 +24,7 @@
             </form>
 
             <a href="{{ route('mahasiswa.create') }}"
-               class="bg-green-600 text-white px-4 py-2 rounded-lg hover:bg-green-700 text-center">
+            class="bg-green-600 text-white px-4 py-2 rounded-lg hover:bg-green-700 text-center">
                 + Tambah Mahasiswa
             </a>
         </div>
@@ -52,11 +52,11 @@
                             <td class="px-4 py-3">
                                 <div class="flex justify-center gap-2">
                                     <a href="{{ route('mahasiswa.show', $mhs) }}"
-                                       class="bg-sky-500 text-white px-3 py-1 rounded hover:bg-sky-600 text-sm">Detail</a>
+                                    class="bg-sky-500 text-white px-3 py-1 rounded hover:bg-sky-600 text-sm">Detail</a>
                                     <a href="{{ route('mahasiswa.edit', $mhs) }}"
-                                       class="bg-yellow-500 text-white px-3 py-1 rounded hover:bg-yellow-600 text-sm">Edit</a>
+                                    class="bg-yellow-500 text-white px-3 py-1 rounded hover:bg-yellow-600 text-sm">Edit</a>
                                     <form action="{{ route('mahasiswa.destroy', $mhs) }}" method="POST"
-                                          onsubmit="return confirm('Yakin ingin menghapus data {{ $mhs->nama }}?')">
+                                        onsubmit="return confirm('Yakin ingin menghapus data {{ $mhs->nama }}?')">
                                         @csrf
                                         @method('DELETE')
                                         <button type="submit"
